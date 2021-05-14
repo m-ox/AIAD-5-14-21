@@ -6,10 +6,11 @@ import {
 } from 'react-router-dom'
 
 // import navigation container
+import NavigationContainer from './navigation/navigation-container'
 
 //import pages
-//import New from "./pages/new"
-//import LogOut from "./navigation/homepage-buttons"
+import New from "./pages/new"
+import LogOut from "./pages/logout"
 
 export default class App extends Component {
 
@@ -22,9 +23,15 @@ export default class App extends Component {
       <div className='app'>
 
           <div>
-            <div className="title-wrapper">
-              <h1>Sticky Notes App</h1>
-            </div>
+
+            <Router>
+              <NavigationContainer />
+
+              <Switch>
+                <Route path="/new" component={New} />
+                <Route exact path="/logout" component={LogOut} />
+              </Switch>
+            </Router>
 
           </div>
       </div>
