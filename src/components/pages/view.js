@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 
-//this.mocky = require('./mockData.js')
-//    console.log(this.mocky)
-
 export default class App extends Component {
 
     constructor() {

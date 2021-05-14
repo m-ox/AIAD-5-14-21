@@ -18,9 +18,6 @@ export default class NavigationComponent extends Component {
         })
     }
 
-
-
-
     render() {
         return (
             <div className="home-title-wrapper">

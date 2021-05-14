@@ -11,11 +11,13 @@ import NavigationContainer from './navigation/user-home-nav'
 //import pages
 import New from "./pages/new"
 import LogOut from "./pages/logout"
+import View from "./pages/view"
 
 export default class App extends Component {
 
   constructor() {
     super()
+
   }
 
   render() {
@@ -29,6 +31,7 @@ export default class App extends Component {
 
               <Switch>
                 <Route path="/new" component={New} />
+                <Route path="/view" component={View} />
                 <Route exact path="/logout" component={LogOut} />
               </Switch>
             </Router>
