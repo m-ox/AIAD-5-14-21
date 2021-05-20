@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 
-//this.mocky = require('./mockData.js')
-//    console.log(this.mocky)
-
 export default class App extends Component {
 
     constructor() {
@@ -13,6 +10,7 @@ export default class App extends Component {
     }
   
     render() {
+        // RIP OFF VIEW PAGE, JUST MAKE IT EMPTY
       return (
           <div>
               {`${this.mocky.mockData[0].title}`}
@@ -20,4 +18,3 @@ export default class App extends Component {
       );
     }
   }
-  

@@ -10,7 +10,6 @@ import NavigationContainer from './navigation/user-home-nav'
 
 //import pages
 import New from "./pages/new"
-import LogOut from "./pages/logout"
 import View from "./pages/view"
 
 export default class App extends Component {
@@ -21,6 +20,10 @@ export default class App extends Component {
   }
 
   render() {
+
+    // TODO - GET STICKY NOTES FROM SPACE CAMP CAMP SPACE DEV CAMP API
+    // CLICK ON STICKY NOTE AND GO TO VIEW PAGE WITH OBJECT ID
+    // https://spacecamp.devcamp.space/portfolio/portfolio_blogs
     return (
       <div className='app'>
 
@@ -32,7 +35,6 @@ export default class App extends Component {
               <Switch>
                 <Route path="/new" component={New} />
                 <Route path="/view" component={View} />
-                <Route exact path="/logout" component={LogOut} />
               </Switch>
             </Router>
 

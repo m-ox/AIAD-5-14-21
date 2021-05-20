@@ -34,10 +34,6 @@ export default class NavigationComponent extends Component {
                 to="/new">
                     New Note
                 </NavLink>
-
-                <NavLink exact to="/logout">
-                    Log Out 
-                </NavLink>
             </div>
         )
     }
