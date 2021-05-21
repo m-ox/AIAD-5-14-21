@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
 
 // import navigation container
 import NavigationContainer from './navigation/user-home-nav'
@@ -27,17 +28,21 @@ export default class App extends Component {
     return (
       <div className='app'>
 
-          <div>
+          <div className="nav-wrapper">
 
             <Router>
               <NavigationContainer />
 
               <Switch>
                 <Route path="/new" component={StickyManager} />
-                <Route path="/view" component={View} />
+                <Route path="/view" component={StickyManager} />
               </Switch>
             </Router>
 
+          </div>
+
+          <div className="content-wrapper">
+            
           </div>
       </div>
     );

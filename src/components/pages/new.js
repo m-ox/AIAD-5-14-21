@@ -1,40 +1,19 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import Sticky from './sticky'
+
 export default class App extends Component {
 
-    constructor() {
-        super()
-
-        this.state = {
-            stickies: []
-        }
-    }
-
-    getStickies() {
-        axios.get("https://spacecamp.devcamp.space/portfolio/portfolio_blogs", {withCredentials: true})
-            .then(response => {
-                console.log("sticky response", response)
-            })
-            .catch(error => {
-                console.log("error", error)
-            })
-    }
-
-    componentDidMount() {
-        this.getStickies()
+    constructor(props) {
+        super(props)
+   
     }
   
     render() {
         // RIP OFF VIEW PAGE, JUST MAKE IT EMPTY
         return (
-            <div className="container">
-              <div className="view-container">
-                <textarea>
-                  
-                </textarea>
-              </div>
-            </div>
+            <Sticky />
         );
       }
     }
