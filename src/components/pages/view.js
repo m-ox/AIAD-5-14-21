@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 import Sticky from './sticky'
 
 const View = (props) => {
+  const stickies = props.data.map(sticky => {
+    return (
+      <Sticky
+        content={sticky.content}
+      />
+    )
+  })
+
   return (
     <div className="view-stickies">
-      <Sticky />
+      {stickies}
     </div>
   )
 }

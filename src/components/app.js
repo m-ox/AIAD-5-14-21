@@ -11,7 +11,9 @@ import NavigationContainer from './navigation/user-home-nav'
 
 //import pages
 import StickyManager from './pages/sticky-manager';
-import View from "./pages/view"
+import New from "./pages/new"
+import Sticky from './pages/sticky';
+import Home from './pages/home'
 
 export default class App extends Component {
 
@@ -34,15 +36,12 @@ export default class App extends Component {
               <NavigationContainer />
 
               <Switch>
-                <Route path="/new" component={StickyManager} />
+                <Route exact path="/" component={Home} />
+                <Route path="/new" component={New} />
                 <Route path="/view" component={StickyManager} />
               </Switch>
             </Router>
 
-          </div>
-
-          <div className="content-wrapper">
-            
           </div>
       </div>
     );

@@ -6,9 +6,7 @@ export default class Sticky extends Component {
         super(props)
 
         this.state = {
-            stickies: [],
-            title: '',
-            content: ''
+            sticky: []
         }
 }
 
@@ -18,7 +16,7 @@ export default class Sticky extends Component {
             <div className="container">
               <div className="view-container">
                 <textarea>
-                    
+                    {this.props.content}
                 </textarea>
               </div>
             </div>

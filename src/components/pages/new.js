@@ -5,13 +5,12 @@ import Sticky from './sticky'
 
 export default class App extends Component {
 
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
    
     }
   
     render() {
-        // RIP OFF VIEW PAGE, JUST MAKE IT EMPTY
         return (
             <Sticky />
         );

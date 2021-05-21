@@ -8,9 +8,7 @@ export default class StickyManager extends Component {
         super()
 
         this.state = {
-            stickies: [],
-            title: '',
-            content: ''
+            stickies: []
         }
     }
 
@@ -34,9 +32,9 @@ export default class StickyManager extends Component {
     render() {
         return (
             <div>
-                <View
-                    data={this.state.stickies}
-                />
+                    <View
+                        data={this.state.stickies}
+                    />
             </div>
         )
     }

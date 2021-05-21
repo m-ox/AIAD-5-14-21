@@ -22,17 +22,12 @@ export default class NavigationComponent extends Component {
         return (
                 <div className="home-title-wrapper"> 
 
+                    
                     <NavLink exact to="/">
-                    <h1>Sticky Notes App</h1>
+                        <h1>Sticky Notes App</h1>
                     </NavLink>
 
-                    <NavLink style={{display: `${this.state.textdisplay}`}} onClick = 
-                    {this.state.textdisplay === 'block'
-                    ? () => this.hideLink('none')
-                    : () => this.hideLink('block')} 
-                    to="/new">
-                        New Note
-                    </NavLink>
+                    <NavLink to="/new"> New Note </NavLink>
 
                 </div>
             
