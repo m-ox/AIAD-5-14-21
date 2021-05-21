@@ -9,7 +9,7 @@ import {
 import NavigationContainer from './navigation/user-home-nav'
 
 //import pages
-import New from "./pages/new"
+import StickyManager from './pages/sticky-manager';
 import View from "./pages/view"
 
 export default class App extends Component {
@@ -33,7 +33,7 @@ export default class App extends Component {
               <NavigationContainer />
 
               <Switch>
-                <Route path="/new" component={New} />
+                <Route path="/new" component={StickyManager} />
                 <Route path="/view" component={View} />
               </Switch>
             </Router>
