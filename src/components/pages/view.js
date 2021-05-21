@@ -1,12 +1,33 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class View extends Component {
 
     constructor() {
         super()
 
-        this.mocky = require('../mockData')
-        console.log(this.mocky.mockData[0].content) //id
+        this.state = {
+          noteItems: []
+        }
+        
+        this.getNoteItems = this.getNoteItems.bind(this)
+    }
+
+    getNoteItems(){
+      axios.get('https://spacecamp.devcamp.space/portfolio/portfolio_blogs',
+      { withCredentials: true 
+      })
+      .then(response => {
+        console.log('response', response)
+      })
+      .catch(error => {
+        console.log('getNoteItems error', error)
+      })
+    }
+
+    UNSAFE_componentWillMount(){  //if not, either DidMount or unsafe_didmount
+      console.log('This comp will mount');
+      this.getNoteItems();
     }
   
     render() {
@@ -16,9 +37,9 @@ export default class View extends Component {
       return (
           <div className="container">
             <div className="view-container">
-              {`${this.mocky.mockData[0].title} created by ${this.mocky.mockData[0].user}`}
+              {/* Title */}
               <textarea rows="15" cols="50">
-                {`${this.mocky.mockData[0].content}`}
+                {/* content */}
               </textarea>
             </div>
           </div>
