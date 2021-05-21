@@ -30,7 +30,6 @@ export default class App extends Component {
         return (
             <div className="container">
               <div className="view-container">
-                {'{Sticky Title} created by {Sticky User}'}
                 <textarea>
                   
                 </textarea>
