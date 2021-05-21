@@ -8,7 +8,7 @@ export default class View extends Component {
 
         this.state = {
           noteItems: []
-        }
+        };
         
         this.getNoteItems = this.getNoteItems.bind(this)
     }
@@ -18,15 +18,18 @@ export default class View extends Component {
       { withCredentials: true 
       })
       .then(response => {
-        console.log('response', response)
+        console.log("res", response);
+        this.setState({
+          noteItems: this.response.data.portfolio_blogs
+        });
       })
       .catch(error => {
-        console.log('getNoteItems error', error)
-      })
+        console.log('getNoteItems error', error);
+      });
     }
 
-    UNSAFE_componentWillMount(){  //if not, either DidMount or unsafe_didmount
-      console.log('This comp will mount');
+    componentDidMount(){  //if not, then DidMount
+      console.log('This comp did mount');
       this.getNoteItems();
     }
   
@@ -34,15 +37,25 @@ export default class View extends Component {
 
       // TODO GET SPACECAMP DATA - https://spacecamp.devcamp.space/portfolio/portfolio_blogs
       // load accordingly
+
+      //store the note records
+
+      const noteRecords = this.state.noteItems.map(noteItem => {
+        return <h1>{noteItem.title}</h1>
+      });
+
       return (
-          <div className="container">
-            <div className="view-container">
-              {/* Title */}
-              <textarea rows="15" cols="50">
-                {/* content */}
-              </textarea>
-            </div>
-          </div>
+        <div className="container">
+          {noteRecords}
+          {/* <div className="view-container"> */}
+          {/* <textarea  
+               rows="15" 
+               cols="50"
+               readOnly value={noteRecords}> */}
+
+          {/* </textarea> */}
+          {/* </div> */}
+        </div>
       );
     }
   }
