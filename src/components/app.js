@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 // import navigation container
-import NavigationContainer from './navigation/user-home-nav'
+import NavigationContainer from './navigation/nav-container'
 
 //import pages
 import New from "./pages/new"
