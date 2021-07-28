@@ -1,5 +1,3 @@
-# React/Redux/Router Starter Project
+# Sticky Note App
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+The classic. Originally mine and Leo's first (and well... eventually only) app in a day with Bottega University. Ambitious attempt considering we just were introduced to React in that first week. It's currently using Bottega's portfolio backend, even though that is very much not the purpose, but hey, it works.
