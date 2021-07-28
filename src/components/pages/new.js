@@ -8,12 +8,23 @@ export default class App extends Component {
     constructor() {
         super()
    
+    this.handlePost = this.handlePost.bind(this)
+    
+    }
+
+    handlePost(event) {
+        axios({
+            method: post,
+            url: `https://spacecamp.devcamp.space/portfolio/portfolio_blogs\{id}`,
+            data: null
+        })
     }
   
     render() {
         return (
-            <Sticky />
+            <div className="new-form">
+                <Sticky />
+            </div>
         );
       }
-    }
-    
+}

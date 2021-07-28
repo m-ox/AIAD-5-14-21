@@ -7,6 +7,7 @@ const View = (props) => {
     return (
       <Sticky
         content={sticky.content}
+        id={sticky.id}
       />
     )
   })
