@@ -9,7 +9,8 @@ function main() {
   ReactDOM.render(
       <BrowserRouter>
         <App />
-      </BrowserRouter>
+      </BrowserRouter>,
+    document.querySelector(".app-wrapper")
   );
 }
 
